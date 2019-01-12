@@ -21,9 +21,11 @@
 
     sudo apt-get update
 
-    sudo apt-get install docker-ce=5:18.09.0~3-0~ubuntu-bionic  <----------- latest did not work, downgraded; 20190112
+    sudo apt-get install docker-ce                                 #<----------- gives the latest .....
 
-    sudo docker container run hello-world # TEST installation
+    sudo apt-get install docker-ce=5:18.09.0~3-0~ubuntu-bionic     #<----------- latest did not work, downgraded; 20190112
+
+    sudo docker container run hello-world  # TEST installation
 
 ## Manage Docker as a non-root user
 
