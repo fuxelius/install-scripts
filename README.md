@@ -1,4 +1,4 @@
-# install-scripts
-Install scripts for all kind of stuff
+# README
+Short reminder how to install certain stuff
 
 
