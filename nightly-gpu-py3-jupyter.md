@@ -4,10 +4,13 @@
 https://stackoverflow.com/questions/50702395/how-to-know-which-version-of-docker-image-is-behind-latest-tag
 
 Created notebooks are saved locally in a docker volume
+-u $(id -u):$(id -g) This lets you run the container by specifying your user's userid:
 
     docker volume create vc_notebooks
 
-    nvidia-docker run -it --rm --name tensorflow -v vc_notebooks:/tf -p 8888:8888 tensorflow/tensorflow:nightly-gpu-py3-jupyter
+    nvidia-docker run -u $(id -u):$(id -g) -it --rm --name tensorflow -v vc_notebooks:/tf -p 8888:8888 tensorflow/tensorflow:nightly-gpu-py3-jupyter
+
+    nvidia-docker run -u $(id -u):$(id -g) -it --rm --name tensorflow -v /home/fuxen/Desktop/tf:/tf -p 8888:8888 tensorflow/tensorflow:nightly-gpu-py3-jupyter
 
     (follow instructions)
 
